@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, User, Eye, AlertTriangle } from "lucide-react";
+import { Link } from "react-router-dom";
 import missingPerson from "@/assets/missing-person-1.jpg";
 
 interface MissingPersonData {
@@ -128,9 +129,11 @@ export function MissingPersonCard() {
           </div>
         </div>
 
-        <Button className="w-full mt-4" size="lg">
-          Сообщить информацию
-        </Button>
+        <Link to="/orientirovka" className="block mt-4">
+          <Button className="w-full" size="lg">
+            Подробнее
+          </Button>
+        </Link>
       </div>
     </div>
   );
